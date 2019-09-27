@@ -437,13 +437,13 @@ exports.removeMemberInfoOnLeaveGroup = functions.database.ref('/apps/{app_id}/gr
 
 
 
-if (functions.config().group && functions.config().group.general && functions.config().group.general.autojoin ) {
+/*if (functions.config().group && functions.config().group.general && functions.config().group.general.autojoin ) {
     exports.addToGeneralMembersOnContantCreation = functions.database.ref('/apps/{app_id}/contacts/{contact_id}').onCreate((data, context) => {
-        
+
         const contact_id = context.params.contact_id;
         const app_id = context.params.app_id;;
         // DEBUG console.log("contact_id: "+ contact_id + ", app_id: " + app_id);
-    
+
         var group_id = "general_group";
 
         return chatApi.getGroupById(group_id, app_id).then(function (group) {
@@ -472,7 +472,7 @@ if (functions.config().group && functions.config().group.general && functions.co
         });
 
     });
-}
+}*/
 
 
 
